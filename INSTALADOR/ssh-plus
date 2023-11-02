@@ -94,7 +94,7 @@ echo -e "\033[97m  # INSTALANDO GIT   ............. $ESTATUS "
 #GIT
 (echo -e "America/Sao_Paulo" >/etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime >/dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1 ) && && ESTATUS=`echo -e "\033[92mINSTALADO"` &>/dev/null || ESTATUS=`echo -e "\033[91mFALLO DE INSTALACION"` &>/dev/null
+dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1 ) && ESTATUS=`echo -e "\033[92mINSTALADO"` &>/dev/null || ESTATUS=`echo -e "\033[91mFALLO DE INSTALACION"` &>/dev/null
 echo -e "\033[97m  # CONFIGURANDO TIMEZONE ........ $ESTATUS "
 cd $HOME
 myIP=$(wget -qO- ifconfig.me)
